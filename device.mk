@@ -449,6 +449,10 @@ PRODUCT_PACKAGES += \
     power.bullhead \
     thermal.bullhead
 
+# old-apns.conf
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/old-apns-conf.xml:system/etc/old-apns-conf.xml
+
 # Modem debugger/misc
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
