@@ -20,6 +20,15 @@
 # Everything in this directory will become public
 
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := device/lge/bullhead-kernel/Image.gz-dtb
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES := \
+    $(LOCAL_KERNEL):kernel
+
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.rc:root/init.bullhead.rc \
     device/lge/bullhead/init.bullhead.usb.rc:root/init.bullhead.usb.rc \
@@ -55,8 +64,8 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl
 
 # for launcher layout
-#PRODUCT_PACKAGES += \
-#    BullheadLayout
+PRODUCT_PACKAGES += \
+    BullheadLayout
 
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \
@@ -116,7 +125,7 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 
 # MSM IRQ Balancer configuration file
-#PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
     device/lge/bullhead/msm_irqbalance.conf:vendor/etc/msm_irqbalance.conf
 
 # Power configuration file
@@ -392,10 +401,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     power.bullhead
 
-# old-apns.conf
-PRODUCT_COPY_FILES += \
-    device/lge/bullhead/old-apns-conf.xml:system/etc/old-apns-conf.xml
-
 # Modem debugger
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
@@ -408,16 +413,13 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.diag.rc.user:root/init.bullhead.diag.rc
 endif
 
+# setup dm-verity configs.
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc.0/f9824900.sdhci/by-name/system
+PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc.0/f9824900.sdhci/by-name/vendor
+$(call inherit-product, build/target/product/verity.mk)
+
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
-# facelock properties
-ro.facelock.black_timeout=400
-ro.facelock.det_timeout=1500
-ro.facelock.rec_timeout=2500
-ro.facelock.lively_timeout=2500
-ro.facelock.est_max_time=600
-ro.facelock.use_intro_anim=false
 
 $(call inherit-product-if-exists, hardware/qcom/msm8994/msm8992.mk)
 $(call inherit-product-if-exists, vendor/qcom/gpu/msm8994/msm8994-gpu-vendor.mk)
