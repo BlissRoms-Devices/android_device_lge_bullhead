@@ -131,6 +131,9 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.bullhead
 
 TARGET_RECOVERY_FSTAB = device/lge/bullhead/fstab.bullhead
 
+# Ensure f2fstools are built
+TARGET_USERIMAGES_USE_F2FS := true
+
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/bullhead
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
