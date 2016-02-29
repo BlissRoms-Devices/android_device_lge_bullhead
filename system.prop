@@ -1,0 +1,7 @@
+# LGE Nexus 5x Hardware Info
+ro.device.chipset=Qualcomm MSM8992 Snapdragon 808
+ro.device.cpu=Quad-core 1.44 GHz Cortex-A53 & dual-core 1.82 GHz Cortex-A57
+ro.device.gpu=Qualcomm Adreno 418
+ro.device.rear_cam=12.3 MP
+ro.device.front_cam=5 MP
+ro.device.screen_res=1080 x 1920 pixels (~423 ppi)
