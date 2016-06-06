@@ -1,9 +1,9 @@
 [
   {
     "remote":    "github",
-    "repository": "CyanogenMod/android_kernel_lge_bullhead",
+    "repository": "DespairFactor/bullhead",
     "target_path": "kernel/lge/bullhead",
-    "branch":      "cm-13.0"
+    "branch":      "maul"
   },
   {
     "remote":     "github",
