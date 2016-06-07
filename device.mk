@@ -143,6 +143,10 @@ PRODUCT_PACKAGES += \
     memtrack.msm8992 \
     lights.bullhead
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libstagefrighthw \

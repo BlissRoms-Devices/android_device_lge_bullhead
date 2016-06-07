@@ -3,7 +3,7 @@
     "remote":    "github",
     "repository": "DespairFactor/bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision":      "maul"
+    "revision":      "master"
   },
   {
     "remote":     "github",
