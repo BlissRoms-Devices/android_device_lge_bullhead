@@ -1,14 +1,14 @@
 [
   {
     "remote":    "github",
-    "repository": "DespairFactor/bullhead",
+    "repository": "Elite-Kernels/elite_bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision":      "master"
+    "revision":      "Elite-M-linux"
   },
   {
     "remote":     "github",
-    "repository": "AICP/proprietary_vendor_lge",
+    "repository": "TheMuppets/proprietary_vendor_lge",
     "target_path": "vendor/lge",
-    "revision":      "mm6.0"
+    "revision":      "cm-13.0"
   }
 ]
