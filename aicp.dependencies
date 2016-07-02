@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "Megatron007/jolla-kernel_bullhead",
+    "target_path": "kernel/lge/bullhead",
+    "branch":      "cm-13.0"
+  },
+  {
+    "repository": "AICP/proprietary_vendor_lge",
+    "target_path": "vendor/lge",
+    "branch":      "mm6.0"
+  }
+]
