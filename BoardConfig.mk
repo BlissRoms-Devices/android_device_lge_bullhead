@@ -161,4 +161,16 @@ EXTENDED_FONT_FOOTPRINT := true
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
 
+# Blissful building options
+BLISSIFY := true
+BLISS_O3 := true
+BLISS_GRAPHITE := true
+#BLISS_KRAIT := true		
+BLISS_PIPE := true
+#BLISS_STRICT := false
+#TARGET_TC_ROM := 4.9
+TARGET_TC_KERNEL := 4.9		
+#TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)		
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
 -include vendor/lge/bullhead/BoardConfigVendor.mk
