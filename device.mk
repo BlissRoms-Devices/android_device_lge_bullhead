@@ -18,6 +18,8 @@
 # are also specific to bullhead devices
 #
 # Everything in this directory will become public
+# Viper 
+BLISS_AUDIO_MOD = viper
 
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.rc:root/init.bullhead.rc \
