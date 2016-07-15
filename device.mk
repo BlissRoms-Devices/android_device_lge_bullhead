@@ -401,6 +401,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Enable electronic image stabilization
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.eis.enable=1
+    persist.camera.is_mode=4
 
 # Incoming number (b/23529711)
 PRODUCT_PROPERTY_OVERRIDES += \
