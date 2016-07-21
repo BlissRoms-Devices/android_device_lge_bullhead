@@ -1,9 +1,9 @@
 [
   {
     "remote":    "github",
-    "repository": "Elite-Kernels/elite_bullhead",
+    "repository": "flar2/bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision":      "Elite-M-linux"
+    "revision":      "ElementalX-2.00"
   },
   {
     "remote":     "github",
