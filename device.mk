@@ -221,7 +221,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
-    fingerprint.bullhead
+    fingerprint.bullhead \
+    fingerprintd
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
