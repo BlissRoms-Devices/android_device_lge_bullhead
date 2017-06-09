@@ -1,0 +1,16 @@
+[
+  {
+    "remote":    "github",
+    "repository": "flar2/bullhead",
+    "target_path": "kernel/lge/bullhead",
+    "revision":      "ElementalX-4.00"
+  },
+  {
+    "remote":     "github",
+    "repository": "BlissRoms-Vendors/proprietary_vendor_lge",
+    "target_path": "vendor/lge",
+    "revision":      "n7.1"
+  }
+]
+
+
