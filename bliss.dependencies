@@ -1,9 +1,9 @@
 [
   {
     "remote":    "github",
-    "repository": "flar2/bullhead",
+    "repository": "BlissRoms-Kernels/android_kernel_lge_bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision":      "ElementalX-4.00"
+    "revision":      "n7.1"
   },
   {
     "remote":     "github",
