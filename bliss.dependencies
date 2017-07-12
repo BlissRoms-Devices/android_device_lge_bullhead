@@ -7,7 +7,7 @@
   },
   {
     "remote":     "github",
-    "repository": "BlissRoms-Vendors/proprietary_vendor_lge",
+    "repository": "BlissRoms-Vendor/proprietary_vendor_lge",
     "target_path": "vendor/lge",
     "revision":      "n7.1"
   }
