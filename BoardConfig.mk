@@ -166,7 +166,8 @@ TARGET_PER_MGR_ENABLED := true
 
 USE_CLANG_PLATFORM_BUILD := true
 
-USE_CLANG_PLATFORM_BUILD := true
+# Enable workaround for slow rom flash
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 TARGET_FS_CONFIG_GEN += device/lge/bullhead/config.fs
 
