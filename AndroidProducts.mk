@@ -16,4 +16,5 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_bullhead.mk \
+    $(LOCAL_DIR)/gzosp.mk \
     $(LOCAL_DIR)/aosp_bullhead_svelte.mk
