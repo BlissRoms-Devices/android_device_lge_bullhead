@@ -1,0 +1,14 @@
+[
+  {
+    "remote":	"los",
+    "repository": "android_kernel_lge_bullhead",
+    "target_path": "kernel/lge/bullhead",
+    "revision":	"lineage-15.0"
+  },
+  {
+    "remote":   "github",
+    "repository": "TheMuppets/proprietary_vendor_lge",
+    "target_path": "vendor/lge",
+    "revision": "lineage-15.0"
+  }
+]
