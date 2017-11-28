@@ -29,6 +29,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 TARGET_NO_BOOTLOADER := true
 
 WITH_DEXPREOPT := true
+DONT_DEXPREOPT_PREBUILTS := true
 
 # Inline kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
