@@ -2,11 +2,11 @@
   {
     "repository": "GZR-Kernels/kernel_lge_bullhead",
     "target_path": "kernel/lge/bullhead",
-    "branch": "8.0"
+    "branch": "8.1"
   },
   {
     "repository": "BigTopKrazies/proprietary_vendor_lge",
     "target_path": "vendor/lge",
-    "branch": "8.0"
+    "branch": "8.1"
   }
 ]
