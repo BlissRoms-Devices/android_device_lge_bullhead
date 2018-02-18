@@ -22,6 +22,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     
 # Google property overides
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=permissive \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
