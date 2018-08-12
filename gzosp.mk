@@ -17,9 +17,9 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=bullhead \
-    PRIVATE_BUILD_DESC="bullhead-user 8.1.0 OPM6.171019.030.E1 4805388 release-keys"
+    PRIVATE_BUILD_DESC="bullhead-user 8.1.0 OPM6.171019.030.H1 4903069 release-keys"
 
-BUILD_FINGERPRINT := google/bullhead/bullhead:8.1.0/OPM6.171019.030.E1/4805388:user/release-keys
+BUILD_FINGERPRINT := google/bullhead/bullhead:8.1.0/OPM6.171019.030.H1/4903069:user/release-keys
    
 # Google property overides
 PRODUCT_PROPERTY_OVERRIDES += \
