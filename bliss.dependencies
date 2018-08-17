@@ -1,14 +1,14 @@
 [
   {
-    "remote":    "github",
-    "repository": "flar2/bullhead",
+    "remote": "github",
+    "repository": "BlissRoms-Kernels/android_kernel_lge_bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision":      "ElementalX-3.00"
+    "revision": "n7.0"
   },
   {
-    "remote":     "github",
+    "remote": "github",
     "repository": "PureNexusProject/proprietary_vendor_lge",
     "target_path": "vendor/lge",
-    "revision":      "n"
+    "revision": "n"
   }
 ]
