@@ -1,15 +1,15 @@
 [
   {
-    "remote":    "github",
+    "remote": "github",
     "repository": "BlissRoms-Kernels/android_kernel_lge_bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision":      "n7.1"
+    "revision": "n7.1"
   },
   {
-    "remote":     "github",
+    "remote": "github",
     "repository": "BlissRoms-Vendor/proprietary_vendor_lge",
     "target_path": "vendor/lge",
-    "revision":      "n7.1"
+    "revision": "n7.1"
   }
 ]
 
