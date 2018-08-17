@@ -1,9 +1,9 @@
 [
   {
     "remote": "github",
-    "repository": "GZR-Kernels/kernel_lge_bullhead",
+    "repository": "BlissRoms-Kernels/android_kernel_lge_bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision": "8.1"
+    "revision": "o8.1"
   },
   {
     "remote": "github",
