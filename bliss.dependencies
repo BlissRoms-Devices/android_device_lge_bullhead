@@ -3,12 +3,12 @@
     "remote": "github",
     "repository": "BlissRoms-Kernels/android_kernel_lge_bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision":      "mm6.0"
+    "revision": "mm6.0"
   },
   {
-    "remote":     "github",
+    "remote": "github",
     "repository": "AICP/proprietary_vendor_lge",
     "target_path": "vendor/lge",
-    "revision":      "mm6.0"
+    "revision": "mm6.0"
   }
 ]
