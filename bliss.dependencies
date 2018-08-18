@@ -6,9 +6,9 @@
     "revision": "o8.0"
   },
   {
-    "remote":   "github",
-    "repository": "TheMuppets/proprietary_vendor_lge",
+    "remote": "github",
+    "repository": "BlissRoms-Vendor/proprietary_vendor_lge",
     "target_path": "vendor/lge",
-    "revision": "lineage-15.0"
+    "revision": "o8.0"
   }
 ]
