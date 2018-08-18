@@ -7,7 +7,7 @@
   },
   {
     "remote": "github",
-    "repository": "AICP/proprietary_vendor_lge",
+    "repository": "BlissRoms-Vendor/proprietary_vendor_lge",
     "target_path": "vendor/lge",
     "revision": "mm6.0"
   }
