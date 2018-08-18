@@ -7,8 +7,8 @@
   },
   {
     "remote": "github",
-    "repository": "PureNexusProject/proprietary_vendor_lge",
+    "repository": "BlissRoms-Vendor/proprietary_vendor_lge",
     "target_path": "vendor/lge",
-    "revision": "n"
+    "revision": "n7.0"
   }
 ]
