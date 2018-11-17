@@ -23,6 +23,7 @@ import init.bullhead.misc.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
     chown system system /sys/kernel/debug/kgsl/proc
 
 on charger
@@ -116,6 +117,11 @@ on boot
     chmod 0660 /dev/ttyHS0
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
+
+    # WebView
+    chmod 0755 /sys/kernel/debug/tracing
+    chmod 0644 /sys/kernel/debug/tracing/trace_marker
+    chown webview_zygote webview_zygote /sys/kernel/debug/tracing/trace_marker
 
     # Fingerprint
     chown system system /sys/bus/spi/drivers/fpc1020/spi1.2/clk_enable
