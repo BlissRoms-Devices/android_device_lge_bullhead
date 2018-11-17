@@ -104,7 +104,6 @@ on boot
     # foreground gets all CPUs except CPU 3
     # CPU 3 is reserved for the top app
     write /dev/cpuset/foreground/cpus 0-2,4-5
-    write /dev/cpuset/foreground/boost/cpus 4-5
     write /dev/cpuset/background/cpus 0
     write /dev/cpuset/system-background/cpus 0-2
     write /dev/cpuset/top-app/cpus 0-5
@@ -223,9 +222,7 @@ on post-fs-data
     mkdir /data/connectivity 0771 system system
 
     # NFC: create data/nfc for nv storage
-    mkdir /data/nfc 0770 nfc nfc
     mkdir /data/vendor/nfc 0770 nfc nfc
-    mkdir /data/nfc/param 0770 nfc nfc
 
     # use qcril.db to handle Ecc and load MBN
     copy /system/etc/qcril.db /data/misc/radio/qcril.db
@@ -349,7 +346,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
     -puse_p2p_group_interface=1 \
-    -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
+    -g@android:wpa_wlan0
 #   we will start as root and wpa_supplicant will switch to user wifi
 #   after setting up the capabilities required for WEXT
 #   user wifi

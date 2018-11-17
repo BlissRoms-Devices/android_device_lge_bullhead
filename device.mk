@@ -120,17 +120,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml
 
-# For SPN display
-PRODUCT_COPY_FILES += \
-    device/lge/bullhead/spn-conf.xml:system/etc/spn-conf.xml
-
 # For GPS
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/sec_config:system/etc/sec_config
 
 # NFC config files
 PRODUCT_COPY_FILES += \
-    device/lge/bullhead/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/lge/bullhead/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf \
     device/lge/bullhead/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
 # For WiFi
@@ -249,7 +245,7 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     android.hardware.nfc@1.0-impl \
-    nfc_nci.bullhead \
+    nfc_nci.msm8992 \
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
