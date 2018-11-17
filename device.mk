@@ -286,6 +286,9 @@ PRODUCT_PACKAGES += \
     wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf
+# Configstore HAL
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.0-impl
 
 # Camera
 PRODUCT_PACKAGES += \
