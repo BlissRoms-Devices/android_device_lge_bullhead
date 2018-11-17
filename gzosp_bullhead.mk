@@ -22,14 +22,13 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/bullhead/bullhead:8.1.0/OPM6.171019.030.H1/4903069:user/release-keys
    
 # Google property overides
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.control_privapp_permissions=permissive \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.com.google.clientidbase=android-google \
-    ro.error.receiver.system.apps=com.google.android.gms \
-    ro.setupwizard.enterprise_mode=1 \
-    ro.com.android.dataroaming=false \
-    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
-    ro.setupwizard.rotation_locked=true \
-    ro.opa.eligible_device=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+    #ro.control_privapp_permissions=permissive \
+    #ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+    #ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+    #ro.com.google.clientidbase=android-google \
+    #ro.error.receiver.system.apps=com.google.android.gms \
+    #ro.setupwizard.enterprise_mode=1 \
+    #ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
+    #ro.setupwizard.rotation_locked=true \
+    #ro.opa.eligible_device=true
