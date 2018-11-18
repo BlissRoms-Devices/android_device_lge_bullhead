@@ -150,6 +150,7 @@ BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 
 BOARD_SEPOLICY_DIRS += \
     device/lge/bullhead/sepolicy
+SELINUX_IGNORE_NEVERALLOWS := true
 
 TARGET_USES_64_BIT_BINDER := true
 
