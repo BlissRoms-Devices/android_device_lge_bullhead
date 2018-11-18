@@ -10,5 +10,11 @@
     "repository": "BlissRoms-Vendor/proprietary_vendor_lge",
     "target_path": "vendor/lge",
     "revision": "p9.0"
+  },
+  {
+    "remote": "github",
+    "repository": "ideaman924/Gcc-Uber-Prebuilts",
+    "target_path": "prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-8.0.1",
+    "revision": "uber-8.0.1"
   }
 ]
