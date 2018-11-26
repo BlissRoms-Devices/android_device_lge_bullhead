@@ -15,6 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/bliss_bullhead.mk \
     $(LOCAL_DIR)/aosp_bullhead.mk \
     $(LOCAL_DIR)/aosp_bullhead_svelte.mk
 
