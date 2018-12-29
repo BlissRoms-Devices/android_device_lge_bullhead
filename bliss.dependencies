@@ -3,7 +3,7 @@
     "remote": "github",
     "repository": "BlissRoms-Kernels/android_kernel_lge_bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision": "p9.0"
+    "revision": "p9.0-2"
   },
   {
     "remote": "github",
