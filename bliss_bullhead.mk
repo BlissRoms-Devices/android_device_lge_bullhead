@@ -29,3 +29,5 @@ PRODUCT_PACKAGES += \
     DeskClock \
     Email
 
+# Chromium
+USE_CHROMIUM := true
