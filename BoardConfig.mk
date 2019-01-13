@@ -32,13 +32,8 @@ TARGET_NO_BOOTLOADER := true
 
 # Inline kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BUILD_TOP := $(shell pwd)
-
-# Inline kernel building
-KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-8.0.1/bin
-KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/lge/bullhead
-TARGET_KERNEL_CONFIG := sphinx_defconfig
+TARGET_KERNEL_CONFIG := aoscp_bullhead_defconfig
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
