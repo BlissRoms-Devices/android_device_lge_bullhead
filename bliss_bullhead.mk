@@ -24,7 +24,6 @@ BUILD_FINGERPRINT := google/bullhead/bullhead:8.1.0/OPM7.181205.001/5080180:user
 PRODUCT_PACKAGES += \
     Camera2 \
     Gallery2 \
-    Music \
     Calendar \
     DeskClock \
     Email
