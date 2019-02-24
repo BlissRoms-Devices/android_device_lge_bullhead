@@ -14,6 +14,9 @@ PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 5X
 TARGET_MANUFACTURER := LGE
 
+# Bliss stable identifier
+BLISS_VERSION_MAINTENANCE:= Stable
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=bullhead \
     PRIVATE_BUILD_DESC="bullhead-user 8.1.0 OPM7.181205.001 5080180 release-keys"
