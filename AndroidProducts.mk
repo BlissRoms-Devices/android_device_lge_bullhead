@@ -16,3 +16,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/gzosp_bullhead.mk
+
+COMMON_LUNCH_CHOICES := \
+    gzosp_bullhead-userdebug
