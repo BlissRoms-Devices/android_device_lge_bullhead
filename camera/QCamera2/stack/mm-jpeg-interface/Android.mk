@@ -5,7 +5,6 @@ include $(LOCAL_PATH)/../../../common.mk
 include $(CLEAR_VARS)
 
 # Too many clang warnings/errors, see b/23163853.
-LOCAL_CLANG := false
 LOCAL_CXX_STL := none
 
 LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
