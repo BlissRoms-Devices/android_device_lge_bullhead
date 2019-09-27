@@ -263,6 +263,8 @@ on post-fs-data
     # Audio
     mkdir /data/misc/audio 0770 audio audio
 
+    setprop vold.decrypt trigger_restart_framework
+
     # perf daemon
     mkdir /data/misc/perfd 0755 root system
     chmod 2755 /data/misc/perfd
