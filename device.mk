@@ -73,10 +73,6 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
     device/lge/bullhead/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl
 
-# for launcher layout
-#PRODUCT_PACKAGES += \
-#    BullheadLayout
-
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/synaptics_rmi4_i2c.idc:system/usr/idc/synaptics_rmi4_i2c.idc
@@ -166,49 +162,8 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-service \
-    android.hardware.camera.provider@2.4-service \
-    android.hardware.configstore@1.0-service \
-    android.hardware.contexthub@1.0-service \
-    android.hardware.drm@1.0-service \
-    android.hardware.gnss@1.0-service \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.graphics.composer@2.1-service \
-    android.hardware.health@1.0-service \
-    android.hardware.keymaster@3.0-service \
-    android.hardware.light@2.0-service \
-    android.hardware.memtrack@1.0-service \
-    android.hardware.sensors@1.0-service \
     gralloc.msm8992 \
-    android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.mapper@2.0-impl \
-    hwcomposer.msm8992 \
-    libgenlock \
-    memtrack.msm8992 \
-    android.hardware.memtrack@1.0-impl
-
-# Light HAL
-PRODUCT_PACKAGES += \
-    lights.bullhead \
-    lights.vts \
-    android.hardware.light@2.0-impl
-
-# RenderScript HAL
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-
-PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libstagefrighthw \
-    libOmxCore \
-    libmm-omxcore \
-    libOmxVdec \
-    libOmxVdecHevc \
-    libOmxVenc
+    libgenlock
 
 # Audio HAL and utilities
 USE_XML_AUDIO_POLICY_CONF := 1
@@ -227,21 +182,64 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libvolumelistener
 
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    rmnetcli
+    
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.soundtrigger@2.0-impl
+
+# Camera
+#PRODUCT_PACKAGES += \
+    #camera.msm8992 \
+    #libcamera \
+    #libmmcamera_interface \
+    #libmmcamera_interface2 \
+    #libmmjpeg_interface \
+    #libqomx_core \
+    #mm-qcamera-app \
+    #android.hardware.camera.provider@2.4-impl \
+    #android.hardware.camera.provider@2.4-service \
+    #camera.device@3.2-impl
+
+# Configstore HAL
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.0-service \
+    android.hardware.configstore@1.0-impl
+
+# Context Hub HAL
+PRODUCT_PACKAGES += \
+    android.hardware.contexthub@1.0-service \
+    android.hardware.contexthub@1.0-impl
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.0-impl
+
 # Dumpstate HAL
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.0-service.bullhead
 
+# Fingerprint HIDL implementation
 PRODUCT_PACKAGES += \
-    librmnetctl \
-    rmnetcli
+    fingerprint.bullhead \
+    android.hardware.biometrics.fingerprint@2.1-service
 
+# Gatekeeper HAL
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl \
-    android.hardware.soundtrigger@2.0-impl
+    gatekeeper.msm8992 \
+    android.hardware.gatekeeper@1.0-impl    \
+    android.hardware.gatekeeper@1.0-service
 
+# GNSS HAL
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.1-impl
+    android.hardware.gnss@1.0-service \
+    android.hardware.gnss@1.0-impl
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
@@ -253,6 +251,50 @@ PRODUCT_PACKAGES += \
     gps.msm8992 \
     android.hardware.gnss@1.0-impl
 
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-service
+
+PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libstagefrighthw \
+    libOmxCore \
+    libmm-omxcore \
+    libOmxVdec \
+    libOmxVdecHevc \
+    libOmxVenc
+    
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0-service \
+    android.hardware.health@1.0-impl
+
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.msm8992
+    
+# Light HAL
+PRODUCT_PACKAGES += \
+    lights.bullhead \
+    lights.vts \
+    android.hardware.light@2.0-service \
+    android.hardware.light@2.0-impl
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-service \
+    memtrack.msm8992 \
+    android.hardware.memtrack@1.0-impl
+
 # NFC packages
 PRODUCT_PACKAGES += \
     libnfc-nci \
@@ -260,51 +302,14 @@ PRODUCT_PACKAGES += \
     Tag \
     android.hardware.nfc@1.1-service
 
-# Keymaster HAL
+# Power HAL
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl
+    power.bullhead \
+    android.hardware.power@1.0-impl \
 
-# Vibrator HAL
+# RenderScript HAL
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl
-
-# Fingerprint HIDL implementation
-PRODUCT_PACKAGES += \
-    fingerprint.bullhead \
-    android.hardware.biometrics.fingerprint@2.1-service
-
-# Context Hub HAL
-PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.0-impl
-
-# Wi-Fi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
-    libwpa_client \
-    hostapd \
-    wificond \
-    wifilogd \
-    wpa_supplicant \
-    wpa_supplicant.conf
-# Configstore HAL
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0-impl
-
-# Camera
-PRODUCT_PACKAGES += \
-    camera.msm8992 \
-    libcamera \
-    libmmcamera_interface \
-    libmmcamera_interface2 \
-    libmmjpeg_interface \
-    libqomx_core \
-    mm-qcamera-app \
-    android.hardware.camera.provider@2.4-impl \
-    camera.device@3.2-impl
-
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@1.0-impl
+    android.hardware.renderscript@1.0-impl
 
 # Sensor & activity_recognition HAL
 TARGET_USES_NANOHUB_SENSORHAL := true
@@ -316,12 +321,9 @@ PRODUCT_PACKAGES += \
     sensors.bullhead \
     activity_recognition.bullhead \
     android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service \
     android.hardware.contexthub@1.0-impl.nanohub \
     android.hardware.contexthub@1.0-service
-
-# new gatekeeper HAL
-PRODUCT_PACKAGES +=                         \
-    android.hardware.gatekeeper@1.0-impl    \
 
 ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
 PRODUCT_PACKAGES += \
@@ -343,14 +345,29 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
     libvts_profiling \
     libvts_multidevice_proto
+    
 # Test HAL for FMQ performance benchmark.
 PRODUCT_PACKAGES += \
     android.hardware.tests.msgq@1.0-impl
 endif
 
+# Vibrator HAL
 PRODUCT_PACKAGES += \
-    keystore.msm8992 \
-    gatekeeper.msm8992
+    android.hardware.vibrator@1.0-impl
+
+#USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
+    libwpa_client \
+    hostapd \
+    wificond \
+    wifilogd \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
@@ -553,19 +570,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.camera.notify_nfc=1
 
-# Power HAL
-PRODUCT_PACKAGES += \
-    power.bullhead \
-    android.hardware.power@1.0-impl \
-
-#GNSS HAL
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl
-
-#USB HAL
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
-
 # Modem debugger/misc
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 ifeq (,$(filter aosp_bullhead, $(TARGET_PRODUCT)))
@@ -605,10 +609,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # USB debugging at boot
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.sys.usb.config=mtp,adb \
-ro.adb.secure=0 \
-ro.secure=0 \
-ro.debuggable=1
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1
 
 # facelock properties
 PRODUCT_PROPERTY_OVERRIDES += \
