@@ -38,9 +38,9 @@ TARGET_KERNEL_CONFIG := gzr_defconfig
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_COMPILE_WITH_MSM_KERNEL := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PHONY_TARGETS := true
+TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
@@ -179,15 +179,6 @@ BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/bullhead-setup.sh
 
 DEVICE_MANIFEST_FILE := device/lge/bullhead/manifest.xml
 DEVICE_MATRIX_FILE := device/lge/bullhead/compatibility_matrix.xml
-
-ifeq ($(TARGET_PRODUCT),aosp_bullhead_svelte)
-BOARD_KERNEL_CMDLINE += mem=1024M maxcpus=2
-MALLOC_SVELTE := true
-endif
-ifeq ($(TARGET_PRODUCT),bullhead_svelte)
-BOARD_KERNEL_CMDLINE += mem=1024M
-MALLOC_SVELTE := true
-endif
 
 # Legacy blob support
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \

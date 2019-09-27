@@ -161,10 +161,6 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_PACKAGES += \
     charger_res_images
 
-PRODUCT_PACKAGES += \
-    gralloc.msm8992 \
-    libgenlock
-
 # Audio HAL and utilities
 USE_XML_AUDIO_POLICY_CONF := 1
 PRODUCT_PACKAGES += \
@@ -181,10 +177,6 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcompostprocbundle \
     libvolumelistener
-
-PRODUCT_PACKAGES += \
-    librmnetctl \
-    rmnetcli
     
 # Audio
 PRODUCT_PACKAGES += \
@@ -253,6 +245,7 @@ PRODUCT_PACKAGES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
+    gralloc.msm8992 \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
@@ -295,6 +288,12 @@ PRODUCT_PACKAGES += \
     memtrack.msm8992 \
     android.hardware.memtrack@1.0-impl
 
+# Misc
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    rmnetcli \
+    libgenlock
+    
 # NFC packages
 PRODUCT_PACKAGES += \
     libnfc-nci \
@@ -406,14 +405,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.media.treble_omx=false
 
-# Write Manufacturer & Model information in created media files.
-# IMPORTANT: ONLY SET THIS PROPERTY TO TRUE FOR PUBLIC DEVICES
-#ifneq ($(filter aosp_bullhead% bullhead%, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     media.recorder.show_manufacturer_and_model=true
-#else
-#$(error "you must decide whether to write manufacturer and model information into created media files for this device. ONLY ENABLE IT FOR PUBLIC DEVICE.")
-#endif  #TARGET_PRODUCT
 
 # Reduce client buffer size for fast audio output tracks
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -609,7 +602,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # USB debugging at boot
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb \
+    persist.sys.usb.config=adb \
     ro.adb.secure=0 \
     ro.secure=0 \
     ro.debuggable=1
