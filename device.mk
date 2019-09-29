@@ -194,17 +194,17 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0-impl
 
 # Camera
-#PRODUCT_PACKAGES += \
-    #camera.msm8992 \
-    #libcamera \
-    #libmmcamera_interface \
-    #libmmcamera_interface2 \
-    #libmmjpeg_interface \
-    #libqomx_core \
-    #mm-qcamera-app \
-    #android.hardware.camera.provider@2.4-impl \
-    #android.hardware.camera.provider@2.4-service \
-    #camera.device@3.2-impl
+PRODUCT_PACKAGES += \
+    camera.msm8992 \
+    libcamera \
+    libmmcamera_interface \
+    libmmcamera_interface2 \
+    libmmjpeg_interface \
+    libqomx_core \
+    mm-qcamera-app \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
+    camera.device@3.2-impl
 
 # Configstore HAL
 PRODUCT_PACKAGES += \
