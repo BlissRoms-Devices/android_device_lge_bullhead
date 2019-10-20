@@ -1,2 +1,4 @@
 allow hal_audio_default kernel:system { module_request };
 allow hal_audio_default hal_power_hwservice:hwservice_manager find;
+allow hal_audio_default servicemanager:binder call;
+allow hal_audio_default ashmemd:binder call;

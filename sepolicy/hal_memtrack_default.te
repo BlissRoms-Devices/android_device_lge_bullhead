@@ -10,3 +10,5 @@ allow hal_memtrack_default surfaceflinger:file read;
 dontaudit hal_memtrack_default { domain -surfaceflinger}:file read;
 allow hal_memtrack_default system_app:dir { search open getattr };
 allow hal_memtrack_default system_app:file { open getattr };
+allow hal_memtrack_default atfwd:dir { search open getattr }; 
+allow hal_memtrack_default hal_fingerprint_default:dir { search open };
