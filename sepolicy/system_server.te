@@ -54,5 +54,3 @@ allow system_server crash_dump:process getpgid;
 
 allow system_server sysfs_backlight:file write;
 allow system_server sysfs_qpnp_25:file write;
-
-allow system_server system_server:process execmem;
