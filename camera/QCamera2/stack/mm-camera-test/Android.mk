@@ -6,6 +6,8 @@ include $(LOCAL_PATH)/../../../common.mk
 include $(CLEAR_VARS)
 
 # b/24171136 many files not compiling with clang/llvm yet
+LOCAL_CLANG := true
+
 LOCAL_CXX_STL := none
 
 LOCAL_CFLAGS:= \
@@ -117,6 +119,8 @@ include $(BUILD_EXECUTABLE)
 include $(CLEAR_VARS)
 
 # b/24171136 many files not compiling with clang/llvm yet
+LOCAL_CLANG := true
+
 LOCAL_CXX_STL := none
 
 LOCAL_CFLAGS:= \
@@ -214,7 +218,7 @@ endif
 LOCAL_CFLAGS += -Wall -Wextra -Werror
 
 LOCAL_SHARED_LIBRARIES:= \
-         libcutils libdl libmmcamera_interface liblog
+         liblog libcutils libdl libmmcamera_interface
 
 LOCAL_MODULE_TAGS := optional
 

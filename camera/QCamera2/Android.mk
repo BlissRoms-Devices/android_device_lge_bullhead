@@ -4,7 +4,7 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-# Too many clang warnings/errors, see b/23163853.
+LOCAL_CLANG := true
 
 LOCAL_SRC_FILES := \
         util/QCameraCmdThread.cpp \
@@ -37,7 +37,7 @@ LOCAL_SRC_FILES += \
         HAL/QCameraParameters.cpp \
         HAL/QCameraThermalAdapter.cpp
 
-LOCAL_CFLAGS := -Wall -Wextra -Werror 
+LOCAL_CFLAGS := -Wall -Wextra -Werror -Wno-unused-label -Wno-unused-parameter
 LOCAL_CFLAGS += -DHAS_MULTIMEDIA_HINTS
 LOCAL_CFLAGS += -DENABLE_MODEL_INFO_EXIF
 
@@ -63,7 +63,7 @@ LOCAL_C_INCLUDES += \
         frameworks/native/include/media/hardware \
         device/lge/bullhead/camera/QCamera2/HAL
 
-TARGET_HEADER_LIBRARIES := generated_kernel_headers 
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 
 #LOCAL_STATIC_LIBRARIES := libqcamera2_util
 LOCAL_C_INCLUDES += \
