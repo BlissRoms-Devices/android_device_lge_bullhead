@@ -252,8 +252,9 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_PACKAGES += \
     libgps.utils \
-    gps.msm8992 \
-    android.hardware.gnss@1.0-impl
+    libgnss \
+    liblocation_api \
+    gps.msm8992
 
 # Graphics
 PRODUCT_PACKAGES += \
