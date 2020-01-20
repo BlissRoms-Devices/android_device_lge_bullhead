@@ -1,0 +1,20 @@
+[
+  {
+    "remote": "github",
+    "repository": "BlissRoms-Devices/android_kernel_lge_bullhead",
+    "target_path": "kernel/lge/bullhead",
+    "revision": "q"
+  },
+  {
+    "remote": "github",
+    "repository": "BlissRoms-Devices/proprietary_vendor_lge",
+    "target_path": "vendor/lge",
+    "revision": "q"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "francois1333/gcc_10_toolchain",
+    "target_path": "prebuilts/gcc_toolchain_10",
+    "revision": "master"
+  }
+]
