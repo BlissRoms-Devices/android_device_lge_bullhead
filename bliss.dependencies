@@ -13,7 +13,7 @@
   },
   {
     "remote": "gitlab",
-    "repository": "francois1333/gcc_10_toolchain",
+    "repository": "francois133/gcc_10_toolchain",
     "target_path": "prebuilts/gcc_toolchain_10",
     "revision": "master"
   }
