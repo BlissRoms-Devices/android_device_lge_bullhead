@@ -3,13 +3,13 @@
     "remote": "github",
     "repository": "BlissRoms-Devices/android_kernel_lge_bullhead",
     "target_path": "kernel/lge/bullhead",
-    "revision": "q"
+    "revision": "q-20200127"
   },
   {
     "remote": "github",
     "repository": "BlissRoms-Devices/proprietary_vendor_lge",
     "target_path": "vendor/lge",
-    "revision": "q"
+    "revision": "q-20200127"
   },
   {
     "remote": "gitlab",
