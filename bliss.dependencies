@@ -1,0 +1,14 @@
+[
+  {
+    "remote": "github",
+    "repository": "BlissRoms-Devices/android_kernel_lge_bullhead",
+    "target_path": "kernel/lge/bullhead",
+    "revision": "q"
+  },
+  {
+    "remote": "github",
+    "repository": "BlissRoms-Devices/proprietary_vendor_lge",
+    "target_path": "vendor/lge/bullhead",
+    "revision": "q"
+  }
+]
