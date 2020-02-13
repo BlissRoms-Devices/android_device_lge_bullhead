@@ -31,6 +31,8 @@ TARGET_NO_BOOTLOADER := true
 WITH_DEXPREOPT := true
 DONT_DEXPREOPT_PREBUILTS := true
 
+TARGET_USE_AOSP_SURFACEFLINGER := true
+
 # Inline kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/lge/bullhead
