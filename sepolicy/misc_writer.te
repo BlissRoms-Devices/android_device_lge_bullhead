@@ -1,1 +1,1 @@
-allow misc_writer proc_cmdline:file { open getattr setattr };
+# allow misc_writer proc_cmdline:file { open getattr setattr };
