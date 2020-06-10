@@ -1,26 +1,26 @@
 [
   {
-    "repository"  : "svlog/kernel_lge_bullhead",
+    "repository"  : "BlissRoms-Devices/android_kernel_lge_bullhead",
     "target_path" : "kernel/lge/bullhead",
-    "branch"      : "stable",
+    "branch"      : "q",
     "remote"      : "github"
   },
   {
-    "repository"  : "lakgarg/proprietary_vendor_lge",
+    "repository"  : "BlissRoms-Devices/proprietary_vendor_lge",
     "target_path" : "vendor/lge",
-    "branch"      : "10",
+    "branch"      : "q",
     "remote"      : "github"
   },
   {
-    "repository"  : "lakgarg/packages_apps_GoogleCamera",
+    "repository"  : "BlissRoms-Devices/platform_packages_apps_GoogleCamera",
     "target_path" : "packages/apps/GoogleCamera",
-    "branch"      : "master",
+    "branch"      : "q",
     "remote"      : "github"
   },
   {
-    "repository"  : "LineageOS/android_hardware_sony_timekeep",
+    "repository"  : "BlissRoms-Devices/platform_hardware_sony_timekeep",
     "target_path" : "hardware/sony/timekeep",
-    "branch"      : "lineage-17.1",
+    "branch"      : "q",
     "remote"      : "github"
   }
 ]
