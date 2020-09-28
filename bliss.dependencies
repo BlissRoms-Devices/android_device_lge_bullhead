@@ -16,11 +16,5 @@
     "target_path" : "packages/apps/GoogleCamera",
     "branch"      : "q",
     "remote"      : "github"
-  },
-  {
-    "repository"  : "BlissRoms-Devices/platform_hardware_sony_timekeep",
-    "target_path" : "hardware/sony/timekeep",
-    "branch"      : "q",
-    "remote"      : "github"
   }
 ]
